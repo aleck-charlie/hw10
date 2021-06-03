@@ -2,6 +2,11 @@ const Employee = require("./../lib/Employee");
 
 
 describe("Employee class", () => {
+  it("Creates an employee object", () => {
+      const e = new Employee(1, 'Scott', 'sbrunz@aol.com');
+      expect(typeof(e)).toBe("object");
+  });
+
   it("Has a id attribute", () => {
       const e = new Employee(1, 'Scott', 'sbrunz@aol.com');
       expect(e.id).toBe(1);
