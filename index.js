@@ -145,8 +145,8 @@ function createTeam() {
 function buildTeam() {
     // create html file
     console.log(teamMembers);
-    //const htmlPageContent = generateHTML(teamMembers);
-    //createFile(htmlPageContent);
+    const htmlPageContent = generateHTML(teamMembers);
+    createFile(htmlPageContent);
 }
 
 // create the file and save it to the output folder
