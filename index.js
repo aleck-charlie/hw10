@@ -144,7 +144,7 @@ function createTeam() {
 // take array of team and send it to the create file
 function buildTeam() {
     // create html file
-    console.log(teamMembers);
+    // console.log(teamMembers);
     const htmlPageContent = generateHTML(teamMembers);
     createFile(htmlPageContent);
 }
