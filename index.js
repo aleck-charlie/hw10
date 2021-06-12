@@ -23,13 +23,13 @@ function createManager() {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'managerId',
-            message: 'What is the team managers id?'
+            name: 'managerName',
+            message: 'What is the team managers name?'
         },
         {
             type: 'input',
-            name: 'managerName',
-            message: 'What is the team managers name?'
+            name: 'managerId',
+            message: 'What is the team managers id?'
         },
         {
             type: 'input',
@@ -43,7 +43,7 @@ function createManager() {
         }
     ]).then(answers => {
         // create manager object
-        const manager = new Manager(answers.managerId, answers.managerName, answers.managerEmail, answers.managerOfficeNumber);
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
         // push manager on to team
         teamMembers.push(manager);
         // ask user to create another employee
@@ -56,13 +56,13 @@ function createEngineer() {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'engineerId',
-            message: 'What is the engineer id?',
+            name: 'engineerName',
+            message: 'What is the engineer name?',
         },
         {
             type: 'input',
-            name: 'engineerName',
-            message: 'What is the engineer name?',
+            name: 'engineerId',
+            message: 'What is the engineer id?',
         },
         {
             type: 'input',
@@ -76,7 +76,7 @@ function createEngineer() {
         }
     ]).then(answers => {
         // create engineer object
-        const engineer = new Engineer(answers.engineerId, answers.engineerName, answers.engineerEmail, answers.engineerGithub);
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         // push engineer on to team
         teamMembers.push(engineer);
         // ask user to create another employee
@@ -87,15 +87,16 @@ function createEngineer() {
 // create intern with prompts
 function createIntern() {
     inquirer.prompt([
-        {
-            type: 'input',
-            name: 'internId',
-            message: 'What is the intern id?',
-        },
+
         {
             type: 'input',
             name: 'internName',
             message: 'What is the intern name?',
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: 'What is the intern id?',
         },
         {
             type: 'input',
@@ -109,7 +110,7 @@ function createIntern() {
         }
     ]).then(answers => {
         // create intern object
-        const intern = new Intern(answers.internId, answers.internName, answers.internEmail, answers.internSchool);
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
         // push intern on to team
         teamMembers.push(intern);
         // ask user to create another employee
@@ -159,5 +160,3 @@ function createFile(htmlCode) {
 
 // start the program
 createManager();
-
-
