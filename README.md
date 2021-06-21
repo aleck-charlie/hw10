@@ -12,7 +12,7 @@ The Team Profile Generator is a server side application that uses Node.js to cre
 
 ## Installation
 
-Github repository is located at (https://github.com/aleck-charlie/hw10).
+Github repository is located at (https://github.com/aleck-charlie/teamgenerator).
 
 ## Usage
 Users can use this application by running 'node index.js' in the terminal and following the prompts that follow. 
